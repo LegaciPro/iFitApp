@@ -1,17 +1,49 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+    <ion-navbar primary>
+        <ion-title>activity</ion-title>
+        <button menuClose ion-item *ngFor="">
+            
+          </button>
+    </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <img src="/assets/images/stepstrack.png" width="45%" height="45%" style="margin-right:5%" (click)="openActivity()">
+            <img src="/assets/images/fitness.png" width="45%" height="45%" style="margin-right:5%" (click)="openBodydime()">
+        </ion-item>
+        <ion-item>
+            <img src="/assets/images/healthdata.jpg" width="45%" height="45%" style="margin-right:5%" (click)="openHealthdat()">
+            <img src="/assets/images/nutrition.png" width="45%" height="45%" style="margin-right:5%" (click)="openFoodsdat()">
+        </ion-item>
+
+    </ion-list>
+    <ion-card>
+
+
+        <ion-list>
+            <button ion-item (click)=openBodydime()>
+      <ion-icon name="body" item-start></ion-icon>
+      Body Info
+    </button>
+
+            <button ion-item (click)=openHealthdat()>
+      <ion-icon name="heart" item-start ></ion-icon>
+      Health Data
+    </button>
+
+            <button ion-item (click)=openMedicalhist()>
+      <ion-icon name="medical" item-start></ion-icon>
+      Medical History
+    </button>
+            <button ion-item (click)=openFoodsdat()>
+        <ion-icon name="nutrition" item-start></ion-icon>
+        Foods Data
+      </button>
+
+
+        </ion-list>
+    </ion-card>
+
 </ion-content>

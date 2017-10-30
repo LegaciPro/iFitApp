@@ -1,0 +1,45 @@
+<!--
+  Generated template for the HealthdataPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>HealthdataPage</ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="closeActivity()">Close</button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+
+        <ion-item>
+            <ion-label>Blood Glucose:</ion-label>
+            <ion-input type="text" [(ngModel)]="bloodglucose" name="bloodglucose" value="" style="width:50%"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Blood Alchohol:</ion-label>
+            <ion-input type="text" [(ngModel)]="bloodalchohol" name="bloodalchohol"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>Inhaler Usage:</ion-label>
+            <ion-input type="text" [(ngModel)]="inhalerusage" name="inhalerusage"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Date</ion-label>
+            <ion-datetime type="hidden" displayFormat="MM/DD/YYYY" [(ngModel)]="mydate"></ion-datetime>
+        </ion-item>
+
+
+
+        <button ion-button type="submit" (click)=savehealthdata() block>Submit</button>
+
+    </ion-list>
+</ion-content>

@@ -1,0 +1,42 @@
+<!--
+  Generated template for the FoodsdataPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>foodsdata</ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="closeActivity()">Close</button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <img src="/assets/images/Breakfast_logo.jpg" width="35%" height="35%" style="margin-right:5%" (click)="breakfast()">
+            <img src="/assets/images/lunch.jpg" width="35%" height="35%" style="margin-right:5%" (click)="lunch()">
+        </ion-item>
+        <ion-item>
+            <img src="/assets/images/snacks.png" width="35%" height="35%" style="margin-right:5%" (click)="snacks()">
+            <img src="/assets/images/dinner.jpg" width="35%" height="35%" style="margin-right:5%" (click)="dinner()">
+        </ion-item>
+
+    </ion-list>
+
+
+    <h2>Total Calories Taken Every Day</h2>
+    <ion-item *ngFor="let caloriesdata of caloriesdatas">
+        {{caloriesdata.calories}} {{caloriesdata.date}}
+    </ion-item>
+    <ion-item *ngFor="let totalcaloriesdata of totalcaloriesdatas">
+        {{totalcaloriesdata.totalcalories}} {{totalcaloriesdata.date}}
+    </ion-item>
+{{totalcalval}}
+
+</ion-content>
